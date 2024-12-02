@@ -8,5 +8,5 @@ def task2():
     pass
 
 if __name__ == '__main__':
-    task1()
-    task2()
+    print(task1())
+    print(task2())
