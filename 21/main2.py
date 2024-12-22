@@ -17,9 +17,9 @@ def dist_pos(pos1, pos2):
     return abs(pos1[0] - pos2[0]) + abs(pos1[1] - pos2[1])
 
 @lru_cache(maxsize=None)
-def get_numpad_step(start, end, n_dir_pads):
+def get_numpad_step(start, end, last_dir_pad, n_dir_pads):
     if start == end:
-        return 1 # A
+        return get_dir_pad_step(last_dir_pad, "A","A", n_dir_pads) # A
 
     start_pos = numpad[start]
     end_pos = numpad[end]
@@ -30,13 +30,17 @@ def get_numpad_step(start, end, n_dir_pads):
         if new_pos not in numpad_reverse:
             continue
         if dist_pos(new_pos, end_pos) < dist:
-            options.append(1 + get_numpad_step(numpad_reverse[new_pos], end, n_dir_pads))
+            options.append(get_dir_pad_step(last_dir_pad, direction, "A", n_dir_pads) +
+                           get_numpad_step(numpad_reverse[new_pos], end, direction, n_dir_pads))
     return min(options)
 
 @lru_cache(maxsize=None)
-def get_dir_pad_step(start, end, n_dir_pads):
+def get_dir_pad_step(start, end, last_dir_pad, n_dir_pads):
     if start == end:
-        return ["A"]
+        if n_dir_pads > 1:
+            return get_dir_pad_step(last_dir_pad, "A", "A", n_dir_pads-1) # A
+        else:
+            return 1
 
     start_pos = dir_pad[start]
     end_pos = dir_pad[end]
@@ -47,24 +51,27 @@ def get_dir_pad_step(start, end, n_dir_pads):
         if new_pos not in dir_pad_reverse:
             continue
         if dist_pos(new_pos, end_pos) < dist:
-            options.extend([direction + o for o in get_dir_pad_step(dir_pad_reverse[new_pos], end, n_dir_pads)])
-    return options
+            if n_dir_pads > 1:
+                options.append(get_dir_pad_step(last_dir_pad, direction, "A", n_dir_pads-1) +
+                               get_dir_pad_step(dir_pad_reverse[new_pos], end, direction, n_dir_pads))
+            else:
+                options.append(1 + get_dir_pad_step(dir_pad_reverse[new_pos], end, direction, n_dir_pads))
+    return min(options)
 
 def get_numpad_sequences(input, n_dir_pads):
-    len_sequences = get_numpad_step("A", input[0])
+    len_sequences = get_numpad_step("A", input[0], "A", n_dir_pads)
     for i in range(len(input) - 1):
-        len_sequences += get_numpad_step(input[i], input[i + 1])
+        len_sequences += get_numpad_step(input[i], input[i + 1], "A", n_dir_pads)
     return len_sequences
 
-num_dir_pads = 1
+num_dir_pads = 25
 
 def task1():
-    input_file = open("test.txt")
+    input_file = open("input.txt")
     inputs = [n.strip() for n in input_file.readlines()]
     total = 0
     for input in inputs:
         len_sequence = get_numpad_sequences(input, num_dir_pads)
-        return len_sequence
         total += len_sequence * int(input.strip('A'))
     return total
 
