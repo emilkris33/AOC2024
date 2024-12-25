@@ -1,0 +1,273 @@
+C:\Users\emilk\PycharmProjects\AOC2024\.venv\Scripts\python.exe C:\Users\emilk\PycharmProjects\AOC2024\24\main2.py
+51715173446832
+z00 = y00 XOR x00
+
+z01 = npf XOR wrd
+npf = y01 XOR x01
+wrd = y00 AND x00
+
+z02 = dgk XOR nkn
+dgk = y02 XOR x02
+nkn = prh OR tvb
+prh = wrd AND npf
+tvb = y01 AND x01
+
+z03 = psp XOR qjq
+psp = y03 XOR x03
+qjq = qwd OR dqj
+qwd = dgk AND nkn
+dqj = x02 AND y02
+
+z04 = rhk XOR pkm
+rhk = x04 XOR y04
+pkm = fbs OR wcf
+fbs = qjq AND psp
+wcf = x03 AND y03
+
+z05 = pst XOR rdh
+pst = wfw OR pgh
+rdh = y05 XOR x05
+wfw = rhk AND pkm
+pgh = x04 AND y04
+
+z06 = dwm XOR rrs
+dwm = mvm OR wvd
+rrs = x06 XOR y06
+mvm = y05 AND x05
+wvd = rdh AND pst
+
+z07 = fvn XOR bks
+fvn = gqt OR dth
+bks = y07 XOR x07
+gqt = x06 AND y06
+dth = rrs AND dwm
+
+z08 = dqr XOR cvp
+dqr = y08 XOR x08
+cvp = djw OR fmj
+djw = x07 AND y07
+fmj = fvn AND bks
+
+z09 = bnj XOR vsm
+bnj = x09 XOR y09
+vsm = tqn OR cvv
+tqn = cvp AND dqr
+cvv = x08 AND y08
+
+z10 = vrn XOR dkr
+vrn = x10 XOR y10
+dkr = psh OR qrc
+psh = vsm AND bnj
+qrc = x09 AND y09
+
+z11 = sgt XOR tgq
+sgt = x11 XOR y11
+tgq = kks OR kmb
+kks = y10 AND x10
+kmb = vrn AND dkr
+
+z12 = ptc XOR gcm
+ptc = ctd OR cnk
+gcm = y12 XOR x12
+ctd = sgt AND tgq
+cnk = x11 AND y11
+
+z13 = kqm XOR fvr
+kqm = cbh OR vrv
+fvr = x13 XOR y13
+cbh = ptc AND gcm
+vrv = x12 AND y12
+
+z14 = ttt XOR cmd
+ttt = y14 XOR x14
+cmd = rhm OR cts
+rhm = x13 AND y13
+cts = kqm AND fvr
+
+z15 = kvg XOR qts
+kvg = x15 XOR y15
+qts = sjm OR dcr
+sjm = cmd AND ttt
+dcr = y14 AND x14
+
+z16 = tvp XOR dwh
+tvp = fsh OR jkh
+dwh = y16 XOR x16
+fsh = y15 AND x15
+jkh = qts AND kvg
+
+z17 = rrp XOR qqc
+rrp = y17 XOR x17
+qqc = hng OR dnw
+hng = dwh AND tvp
+dnw = y16 AND x16
+
+z18 = njf XOR wkc
+njf = bhk OR fhk
+wkc = x18 XOR y18
+bhk = rrp AND qqc
+fhk = y17 AND x17
+
+z19 = tnp XOR ktg
+tnp = rwt OR gnm
+ktg = y19 XOR x19
+rwt = x18 AND y18
+gnm = wkc AND njf
+
+z20 = kpp XOR ngd
+kpp = y20 XOR x20
+ngd = dss OR qhh
+dss = tnp AND ktg
+qhh = x19 AND y19
+
+z21 = vfb XOR bqb
+vfb = x21 XOR y21
+bqb = nrm OR snt
+nrm = ngd AND kpp
+snt = x20 AND y20
+
+z22 = cst XOR jfm
+cst = fmg OR vgj
+jfm = y22 XOR x22
+fmg = y21 AND x21
+vgj = bqb AND vfb
+
+z23 = hcq XOR qrh
+hcq = fpw OR mgb
+qrh = y23 XOR x23
+fpw = y22 AND x22
+mgb = jfm AND cst
+
+z24 = mrd XOR gdn
+mrd = y24 XOR x24
+gdn = trn OR vft
+trn = x23 AND y23
+vft = qrh AND hcq
+
+z25 = bpw XOR dgv
+bpw = y25 XOR x25
+dgv = qnc OR gbv
+qnc = gdn AND mrd
+gbv = x24 AND y24
+
+z26 = hpr XOR kch
+hpr = dpg OR gcj
+kch = x26 XOR y26
+dpg = y25 AND x25
+gcj = dgv AND bpw
+
+z27 = cgv XOR cmg
+cgv = x27 XOR y27
+cmg = mvj OR jrv
+mvj = kch AND hpr
+jrv = x26 AND y26
+
+z28 = cqq XOR hqr
+cqq = fpr OR hqk
+hqr = y28 XOR x28
+fpr = y27 AND x27
+hqk = cmg AND cgv
+
+z29 = wpw XOR ppn
+wpw = x29 XOR y29
+ppn = kwc OR qwc
+kwc = x28 AND y28
+qwc = hqr AND cqq
+
+z30 = nkm XOR kbc
+nkm = hsj OR bdh
+kbc = x30 XOR y30
+hsj = x29 AND y29
+bdh = wpw AND ppn
+
+z31 = rwb XOR ntb
+rwb = dvh OR cfn
+ntb = y31 XOR x31
+dvh = kbc AND nkm
+cfn = x30 AND y30
+
+z32 = cbq XOR fqm
+cbq = vkm OR dcg
+fqm = y32 XOR x32
+vkm = y31 AND x31
+dcg = rwb AND ntb
+
+z33 = wrp XOR vsd
+wrp = y33 XOR x33
+vsd = cch OR qqp
+cch = x32 AND y32
+qqp = cbq AND fqm
+
+z34 = sjd XOR qjg
+sjd = x34 XOR y34
+qjg = ksh OR jmq
+ksh = x33 AND y33
+jmq = vsd AND wrp
+
+z35 = mmf XOR tsw
+mmf = x35 AND y35
+tsw = gbs OR nvt
+gbs = x34 AND y34
+nvt = sjd AND qjg
+
+z36 = bsj XOR ccs
+bsj = qhw OR vdk
+ccs = y36 XOR x36
+qhw = mmf AND tsw
+vdk = y35 XOR x35
+
+z37 = jht XOR vgt
+jht = y37 XOR x37
+vgt = mtm OR hwr
+mtm = ccs AND bsj
+hwr = y36 AND x36
+
+z38 = knh XOR jfn
+knh = y38 XOR x38
+jfn = jcq OR bnw
+jcq = jht AND vgt
+bnw = y37 AND x37
+
+z39 = wsm XOR qjf
+wsm = y39 XOR x39
+qjf = mbt OR brc
+mbt = y38 AND x38
+brc = knh AND jfn
+
+z40 = ksj XOR bhc
+ksj = kvd OR twk
+bhc = y40 XOR x40
+kvd = x39 AND y39
+twk = wsm AND qjf
+
+z41 = ckw XOR hcv
+ckw = x41 XOR y41
+hcv = dkm OR bhd
+dkm = bhc AND ksj
+bhd = x40 AND y40
+
+z42 = hvs XOR nfp
+hvs = y42 XOR x42
+nfp = rjg OR cds
+rjg = y41 AND x41
+cds = hcv AND ckw
+
+z43 = qmd XOR fnh
+qmd = dqw OR rvr
+fnh = x43 XOR y43
+dqw = y42 AND x42
+rvr = hvs AND nfp
+
+z44 = bhg XOR hpj
+bhg = x44 XOR y44
+hpj = njn OR vkf
+njn = y43 AND x43
+vkf = qmd AND fnh
+
+z45 = mqf OR gvw
+mqf = bhg AND hpj
+gvw = x44 AND y44
+
+dpg,kmb,tvp,z10,z15,z25,
+
+Process finished with exit code 0
